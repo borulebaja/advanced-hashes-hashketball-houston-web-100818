@@ -120,8 +120,8 @@ end
 
 def num_points_scored(name)
   game_hash.each do |team, team_data|       #iterating into a new level of hash
-    team_data.each do |team_data, attribute|    # .each returns the original collection that you are iterating over   
-      if team_data == :players && attribute.has_key?(name)  #.has_key returns true if the given key is present in a hash
+    team_data.each do |team_data, attribute|                     # .each returns the original collection that you are iterating over   
+      if team_data == :players && attribute.has_key?(name)       #.has_key returns true if the given key is present in a hash
         return attribute[name][:points]
       end
     end
@@ -166,7 +166,7 @@ end
 def player_stats(name)
   game_hash.each do |team, team_data|
     team_data.each do |team_data, attribute|
-      if team_data == :players && attribute.has_key?(name)    #.has_key returns true if the given key is present in a hash
+      if team_data == :players && attribute.has_k                 #.has_key returns true if the given key is present in a hash
         return attribute[name]
       end
     end
